@@ -113,14 +113,6 @@ xylophone/
 └── README.md
 ```
 
----
-
-## 📊 GitHub Language Stats (100% Dart)
-
-This repository includes a configured `.gitattributes` file using **GitHub Linguist** overrides. Boilerplate platform directories (`android/`, `ios/`, `windows/`, `linux/`, `macos/`, `web/`) are marked as `linguist-vendored`, ensuring GitHub language analytics (and tracker platforms like **gitfut**) accurately recognize this project as **100% Dart**.
-
----
-
 ## 📜 License
 
 This project is open-source under the [MIT License](LICENSE). Feel free to modify and play your own tunes!
