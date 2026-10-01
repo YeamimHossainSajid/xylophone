@@ -1,0 +1,21 @@
+# ==============================================================================
+# GitHub Linguist Configuration
+# Mark boilerplate platform and build folders as vendored so GitHub classifies
+# this repository as 100% Dart in language statistics (gitfut / GitHub stats).
+# ==============================================================================
+
+# Vendor platform wrappers
+android/** linguist-vendored
+ios/** linguist-vendored
+linux/** linguist-vendored
+macos/** linguist-vendored
+windows/** linguist-vendored
+web/** linguist-vendored
+
+# Exclude assets and tests from language stats
+assets/** linguist-vendored
+test/** linguist-vendored
+
+# Explicitly mark Dart files
+*.dart linguist-detectable=true
+*.dart linguist-language=Dart

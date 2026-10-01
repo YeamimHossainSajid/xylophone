@@ -1,30 +1,21 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
 import 'package:xylophone/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  testWidgets('XylophoneApp renders title and xylophone keys', (WidgetTester tester) async {
+    await tester.pumpWidget(const XylophoneApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // Verify app title renders
+    expect(find.text('Pocket Xylophone'), findsOneWidget);
+    expect(find.text('Harmonic Rainbow Keys'), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Verify default letter notes render (C, D, E, F, G, A, B)
+    expect(find.text('C'), findsOneWidget);
+    expect(find.text('D'), findsOneWidget);
+    expect(find.text('E'), findsOneWidget);
+    expect(find.text('F'), findsOneWidget);
+    expect(find.text('G'), findsOneWidget);
+    expect(find.text('A'), findsOneWidget);
+    expect(find.text('B'), findsOneWidget);
   });
 }
